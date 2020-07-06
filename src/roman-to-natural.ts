@@ -1,4 +1,4 @@
-import { romanMap } from './roman-map.ts';
+import { romanMap, romanDigits } from './roman-map.ts';
 
 export const romanToNatural = (romanNumber: string): number => {
   let natural: number = 0;
@@ -11,13 +11,13 @@ export const romanToNatural = (romanNumber: string): number => {
       const currentDigitValue = romanMap.get(currentRomanDigit);
 
       if (currentDigitValue === undefined) {
-        throw `Invalid roman digit '${currentRomanDigit}' found in roman number '${romanNumber}'. Acceptable digits are ${[ ...romanMap.keys() ]}`;
+        throw `Invalid roman digit '${currentRomanDigit}' found in roman number '${romanNumber}'. Acceptable digits are ${romanDigits}`;
       }
 
       const nextRomanDigit = upperRomanNumber.charAt(i + 1);
       const nextDigitValue = romanMap.get(nextRomanDigit);
 
-      if (currentDigitValue < nextDigitValue) {
+      if (nextDigitValue && currentDigitValue < nextDigitValue) {
         natural -= currentDigitValue;
       } else {
         natural += currentDigitValue;
