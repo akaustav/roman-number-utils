@@ -26,5 +26,3 @@ export const naturalToRoman = (natural: number): string => {
 
   return roman;
 };
-
-console.log(naturalToRoman(400));
