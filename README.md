@@ -23,3 +23,7 @@ const roman = naturalToRoman(natural);
 
 console.log(roman); // expected output: LIV
 ```
+
+## License
+
+The [MIT License](LICENSE)
