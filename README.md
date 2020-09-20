@@ -2,6 +2,17 @@
 
 Utility methods to convert natural numbers to roman numbers and vice-versa.
 
+## Natural to Roman Number Example
+
+```typescript
+import { naturalToRoman } from 'https://deno.land/x/roman_number_utils@1.0.1/mod.ts';
+
+const natural = 54;
+const roman = naturalToRoman(natural);
+
+console.log(roman); // expected output: LIV
+```
+
 ## Roman to Natural Number Example
 
 ```typescript
@@ -13,15 +24,11 @@ const natural = romanToNatural(roman);
 console.log(natural); // expected output: 2020
 ```
 
-## Natural to Roman Number Example
+## Execute Examples
 
-```typescript
-import { naturalToRoman } from 'https://deno.land/x/roman_number_utils@1.0.1/mod.ts';
-
-const natural = 54;
-const roman = naturalToRoman(natural);
-
-console.log(roman); // expected output: LIV
+```shell
+deno run https://deno.land/x/roman_number_utils/examples/example-natural-to-roman.ts
+deno run https://deno.land/x/roman_number_utils/examples/example-roman-to-natural.ts
 ```
 
 ## License
